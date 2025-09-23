@@ -1,1 +1,288 @@
 /* Your SCSS here. */
+$font-stack: 'Inter', sans-serif;
+$colors: (
+  intro: #3f8ddc,
+  about: #a9d5af,
+  hobbies: #d55e5e,
+  experience: #5a74b6,
+  contact: #5f94c0
+);
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+    padding: 100px 20px;
+    min-height: auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+ 
+  #about p {
+    max-width: 700px; 
+    margin: 0 auto;   
+    line-height: 1.6;  
+    text-align: center; 
+  }
+  #contact {
+    padding: 3px 20px; 
+  }
+  #hobbies {
+    padding: 5px 10px; 
+  }
+  
+
+#intro { background-color: map-get($colors, intro); }
+#about { background-color: map-get($colors, about); }
+#hobbies { background-color: map-get($colors, hobbies); }
+#experience { background-color: map-get($colors, experience); }
+#contact { background-color: map-get($colors, contact); }
+
+#intro img {
+  width: 300px;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+header {
+    width: 100%;
+    background-color: rgba(255, 255, 255); 
+    position: sticky; 
+    top: 0;           
+    z-index: 1000;    
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center; 
+    list-style: none;
+    margin: 0;
+    padding: 20px 0;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  header {
+    padding: 20px 0;
+    transition: all 0.3s ease; 
+  }
+  
+  nav ul li a {
+    font-size: 18px;
+    transition: all 0.3s ease; 
+  }
+    header.small {
+    padding: 10px 0;
+  }
+  
+  header.small nav ul li a {
+    font-size: 14px;
+  }
+
+nav ul li a.active {
+    color: #0077cc; 
+    border-bottom: 2px solid #0077cc; 
+    padding-bottom: 2px;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  
+.carousel {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+  }
+  
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    min-width: 100%;
+    text-align: center;
+    display: none; 
+  }
+  
+  .slide.active {
+    display: block;
+  }
+  
+  .slide img {
+    width: 300px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 30px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .carousel .prev {
+    left: 10px;
+  }
+  
+  .carousel .next {
+    right: 10px;
+  }
+  
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.experience-tile {
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.experience-tile:hover {
+  background: rgb(255,255,255);
+  transform: scale(1.05);
+}
+
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background: white;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 60%;
+  max-width: 700px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.close {
+  float: right;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+$section-padding: 4rem;
+$text-color: white;
+
+#background {
+  background-image: url('../assets/mountains.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh; 
+  background-attachment: fixed; 
+  color: $text-color;
+  text-align: center;
+  padding: $section-padding;
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  object-fit: cover; 
+  z-index: 1;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; 
+  color: white;
+  text-align: center;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.7);
+
+  img {
+    width: 300px;
+    height: 350px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+}
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+
+  a {
+    color: #0077b5; 
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    i {
+      color: inherit; 
+    }
+  }
+}

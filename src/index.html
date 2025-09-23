@@ -1,13 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+      <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
         <meta charset="utf-8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MP1</title>
+        <title>About Me- Govind</title>
     </head>
     <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
+        <header>
+            <nav>
+              <ul>
+                <li><a href="#intro">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </nav>
+        </header>
+
+        <section id="intro" class="video-section">
+          <video class="background-video" autoplay muted loop playsinline>
+            <source src="./assets/video.mp4" type="video/mp4">
+          </video>
+        
+          <div class="video-overlay">
+            <img src="./assets/image.jpg" alt="Profile Picture" />
+            <h1>Who is Govind Balakrishnan?</h1>
+            <p>Student | Bioengineer | Innovator</p>
+          </div>
+        </section> 
+        
+          <section id="about">
+            <h2>About Me</h2>
+            <p>My name is Govind Balakrishnan and I am a bioengineering student at the University of Illinois Urbana-Champaign!
+                I am passionate about making a impact in the healthcare industry, and specifically using computational biology
+                and biotech to improve hospitals workflow. On this page, you can find more about my work and experience!
+                I am from Denver, Colorado and am a huge sports fan. I have a dog and love animals in general, and on this page
+                you can read more about my hobbies, my experience, and some of my interests!
+            </p>
+          </section>
+
+          <section id="hobbies">
+            <h2>Hobbies</h2>
+            <div class="carousel">
+              <button class="prev">&#10094;</button>
+              <div class="slides">
+                <div class="slide active">
+                  <img src="./assets/sports.jpg" alt="Playing Sports">
+                  <p>Playing Sports!</p>
+                </div>
+                <div class="slide">
+                  <img src="./assets/travelling.jpg" alt="Travelling">
+                  <p>Travelling!</p>
+                </div>
+                <div class="slide">
+                  <img src="./assets/dog.jpg" alt="Hanging Out with my Dog">
+                  <p>Hanging Out with my Dog! </p>
+                </div>
+                <div class="slide">
+                    <img src="./assets/sightseeing.jpg" alt="Sightseeing">
+                    <p>Sightseeing! </p>
+                  </div>
+                  <div class="slide">
+                    <img src="./assets/food.jpg" alt="Trying new Food">
+                    <p>Trying new Foods! </p>
+                  </div>
+              </div>
+              <button class="next">&#10095;</button> <!-- right arrow -->
+            </div>
+          </section>
+          
+          <section id="experience">
+            <h2>Professional Experience</h2>
+            <div class="experience-grid">
+              <div class="experience-tile" data-role="research">
+                <h3>Research Intern</h3>
+                <p>University of Colorado Denver Anschutz</p>
+              </div>
+              <div class="experience-tile" data-role="undergrad">
+                <h3>Undergraduate Researcher</h3>
+                <p>Dr. Howard Gritton Research Lab</p>
+              </div>
+              <div class="experience-tile" data-role="project">
+                <h3>Project Lead</h3>
+                <p>Sudden Cardiac Death Awareness Research Foundation</p>
+              </div>
+            </div>
+          </section>
+          
+          <div id="experience-modal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <div id="modal-text"></div>
+            </div>
+          </div>
+          <section id="background">
+            <h2>Where am I From?</h2>
+            <p>This is the Rocky Mountains, Colorado. I am from around here and my family
+              and I would always visit here every winter to see beautiful views like this!</p>
+          </section>   
+
+          <section id="contact">
+            <h2>Contact Me!</h2>
+            <div class="social-icons">
+              <a href="mailto:gvndbalakrishnan@gmail.com" target="_blank">
+                <i class="fa-solid fa-envelope fa-2x"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/govind-balakrishnan/" target="_blank">
+                <i class="fa-brands fa-linkedin fa-2x"></i>
+              </a>
+            </div>
+          </section>   
+
     </body>
 </html>
